@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #16002e, #3b0066, #001f3f);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Main Container */
+
+.container {
+    min-height: 100vh;
+    text-align: center;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Small Text */
+
+.small-text {
+    font-size: 18px;
+    letter-spacing: 2px;
+    animation: glow 2s infinite alternate;
+}
+
+/* Main Heading */
+
+h1 {
+    margin-top: 15px;
+    font-size: 70px;
+    background: linear-gradient(90deg, #ff69b4, #ffd700, #00ffff);
+    color: transparent;
+    animation: title 3s infinite;
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 30px;
+    color: #ffd6f6;
+}
+
+/* Cake */
+
+.cake {
+    margin: 35px 0 20px;
+    position: relative;
+    animation: bounce 2s infinite;
+}
+
+.cake-body {
+    font-size: 100px;
+}
+
+.candle {
+    font-size: 35px;
+    position: absolute;
+    top: -25px;
+    left: 48px;
+}
+
+/* Message */
+
+.message {
+    max-width: 650px;
+    line-height: 1.7;
+    font-size: 18px;
+    color: #eeeeee;
+}
+
+.message p {
+    margin: 12px;
+}
+
+/* Special Wish */
+
+.wish {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+/* Button */
+
+button {
+    margin-top: 25px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #ff1493, #8a2be2);
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px #ff69b4;
+}
+
+/* Special Wish Text */
+
+#specialWish {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #00ffff;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Balloons */
+
+.balloon {
+    position: fixed;
+    font-size: 55px;
+    animation: float 6s infinite ease-in-out;
+}
+
+.b1 {
+    left: 5%;
+    bottom: -80px;
+}
+
+.b2 {
+    left: 25%;
+    bottom: -100px;
+    animation-delay: 1s;
+}
+
+.b3 {
+    right: 20%;
+    bottom: -100px;
+    animation-delay: 2s;
+}
+
+.b4 {
+    right: 5%;
+    bottom: -100px;
+    animation-delay: 3s;
+}
+
+/* Stars */
+
+.stars {
+    position: fixed;
+    top: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 30px;
+    color: #fff;
+    animation: twinkle 2s infinite alternate;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 30px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* Animations */
+
+@keyframes title {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px white;
+    }
+
+    to {
+        text-shadow: 0 0 25px #ff69b4;
+    }
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .message {
+        font-size: 16px;
+    }
+
+    .cake-body {
+        font-size: 75px;
+    }
+
+    .candle {
+        left: 35px;
+    }
+}
